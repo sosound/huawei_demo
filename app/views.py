@@ -10,4 +10,4 @@ def show(request):
         'message': 'success',
         'data': []
     }
-    return JsonResponse(result)
+    return render(request, 'show.html')
