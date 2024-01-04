@@ -33,4 +33,4 @@ urlpatterns = [
     re_path(r'^static/(?P<path>.*)$', return_static, name='static'),
 ]
 
-urlpatterns += static(settings.STATIC_URL, return_static, name='static')
+urlpatterns += static(settings.STATIC_URL)
