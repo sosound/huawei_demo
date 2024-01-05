@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path
 from django.conf import settings
+# from django.conf.urls import url
 from django.conf.urls.static import static
 from django.contrib.staticfiles.views import serve
 
@@ -31,6 +32,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('show/', views.show, name='show/'),
     re_path(r'^static/(?P<path>.*)$', return_static, name='static'),
+    path('play/', views.stream_video),
 ]
 
 urlpatterns += static(settings.STATIC_URL)
