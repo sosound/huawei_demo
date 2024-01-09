@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'demo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'database02',
+        'USER': 'star',
+        'PASSWORD': 'star',
+        'HOST': '114.115.222.222',
+        'PORT': '3306'
     }
 }
 
@@ -126,3 +130,5 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MY_ROBOT = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=35b96c89-b03f-41e9-90ce-a85be868fe2c'

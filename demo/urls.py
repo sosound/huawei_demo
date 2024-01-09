@@ -31,8 +31,11 @@ def return_static(request, path, insecure=True, **kwargs):
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('show/', views.show, name='show/'),
+    path('login/', views.login_view, name='login_name'),
+    path('register/', views.register, name='register/'),
+    path('temp/', views.temp, name='temp/'),
+    path('index/', views.index, name='index_name'),
     re_path(r'^static/(?P<path>.*)$', return_static, name='static'),
-    path('play/', views.stream_video),
 ]
 
 urlpatterns += static(settings.STATIC_URL)

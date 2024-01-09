@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>videojs</title>
+    <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
+
+<script>var player = videojs('my-video');</script>
+    <script>
+        var player = videojs('my-video', {
+  playbackRates: [0.5, 1, 1.5, 2],
+  defaultPlaybackRate: 1
+});
+    </script>
+</head>
+<video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
+  poster="" data-setup="{}">
+    <source src="https://coastlines.oss-cn-beijing.aliyuncs.com/ooDbO8oXAYP9KnIWISQAmf8VkGDAkleCggBiQc.MP4" type='video/mp4'>
+{#    <source src="MY_VIDEO.webm" type='video/webm'>#}
+    <p class="vjs-no-js">
+      您的浏览器不支持HTML5视频播放
+    </p>
+</video>
+</body>
+</html>
